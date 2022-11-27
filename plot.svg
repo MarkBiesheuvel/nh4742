@@ -1,0 +1,254 @@
+<!-- Viewbox with 1m meter margin on the sides -->
+<svg viewBox='-100 -100 1400 3456' xmlns='http://www.w3.org/2000/svg'>
+
+    <style>
+        text {
+            fill: black;
+            font: 80px sans-serif;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+    </style>
+
+    <!-- Entire plot -->
+    <g visibility='visible'>
+        <path fill='#6abb4f' d='
+            M 0 0
+            v 2662
+            h 600
+            v 594
+            h 700
+            v -594
+            v -2184
+            q -650 -150 -1300 -478
+        '/>
+        <path fill='#34a554' d='
+            M 0 0
+            v 550
+            q 650 300 1300 442
+            v -514
+            q -650 -150 -1300 -478
+        '/>
+    </g>
+
+    <!-- Two fixed parking spots -->
+    <g fill='#bfd642' visibility='visible'>
+        <path d='
+            M 650 3200
+            h 450
+            v -225
+            h -450
+            Z
+        '/>
+        <path d='
+            M 650 2950
+            h 450
+            v -225
+            h -450
+            Z
+        '/>
+    </g>
+
+    <!-- Border of building area -->
+    <g fill='#000' visibility='hidden'>
+        <path d='
+            M 200 2362
+            h 900
+            v -1400
+            h -900
+            Z
+        '/>
+    </g>
+
+    <!-- Default dimensions of GL4 -->
+    <g fill='#e31d26' visibility='hidden'>
+        <path d='
+            M 200 2362
+            h 875
+            v -1250
+            h -875
+            Z
+        '/>
+    </g>
+
+    <!-- Custom sized house with one parking spot  -->
+    <g fill='#e31d26' visibility='hidden'>
+        <path d='
+            M 200 2362
+            h 800
+            v -550
+            h 300
+            v -700
+            h -600
+            v 200
+            h -500
+            Z
+        '/>
+        <path fill='#bfd642' d='
+            M 1038 1862
+            v 450
+            h 225
+            v -450
+            Z
+        '/>
+    </g>
+
+    <!-- Custom sized house with garage on the front  -->
+    <g fill='#e31d26' visibility='visible'>
+        <path d='
+            M 0 2662
+            h 600
+            v -300
+            h 500
+            v -1200
+            h -900
+            v 900
+            h -200
+            Z
+        '/>
+
+        <!-- Ground floor rooms (walls are 35cm) -->
+        <g fill='#FF647F' visibility='visible'>
+            <g>
+                <path d='
+                    M 35 2627
+                    h 530
+                    v -265
+                    h -530
+                    Z
+                '/>
+                <text x="300" y="2495">Garage</text>
+            </g>
+            <g>
+                <path d='
+                    M 35 2097
+                    h 350
+                    v 230
+                    h -350
+                    Z
+                '/>
+                <text x="210" y="2212">Pantry</text>
+            </g>
+            <g>
+                <path d='
+                    M 420 2097
+                    h 145
+                    v 230
+                    h -145
+                    Z
+                '/>
+                <text x="492" y="2212">WC</text>
+            </g>
+            <g>
+                <path d='
+                    M 600 2097
+                    v -300
+                    h 120
+                    v 300
+                    h 345
+                    v 230
+                    h -465
+                    Z
+                '/>
+                <text x="832" y="2212">Entrance</text>
+            </g>
+            <g>
+                <path d='
+                    M 755 1797
+                    h 310
+                    v 265
+                    h -310
+                    Z
+                '/>
+                <text x="910" y="1929">Office</text>
+            </g>
+            <g>
+                <path d='
+                    M 600 1197
+                    h 465
+                    v 565
+                    h -465
+                    Z
+                '/>
+                <text x="832" y="1479">Living</text>
+            </g>
+            <g>
+                <path d='
+                    M 235 1197
+                    h 330
+                    v 865
+                    h -330
+                    Z
+                '/>
+                <text x="400" y="1479">Dining</text>
+                <text x="400" y="1830">Kitchen</text>
+            </g>
+        </g>
+
+        <!-- First floor rooms (walls are 35cm) -->
+        <g fill='#FF647F' visibility='hidden'>
+            <g>
+                <path fill="#FF92A5" d='
+                    M 600 2097
+                    h 465
+                    v 230
+                    h -465
+                    Z
+                '/>
+                <text x="832" y="2212">Vide</text>
+            </g>
+            <g>
+                <path d='
+                    M 600 2007
+                    v -400
+                    h 90
+                    v 400
+                    h 375
+                    v 90
+                    h -465
+                    Z
+                '/>
+            </g>
+            <g>
+                <path d='
+                    M 235 2007
+                    h 330
+                    v 320
+                    h -330
+                    Z
+                '/>
+                <text x="400" y="2167">Bath</text>
+            </g>
+            <g>
+                <path d='
+                    M 235 1607
+                    h 330
+                    v 365
+                    h -330
+                    Z
+                '/>
+                <text x="400" y="1789">Bed #2</text>
+            </g>
+            <g>
+                <path d='
+                    M 725 1607
+                    h 340
+                    v 365
+                    h -340
+                    Z
+                '/>
+                <text x="895" y="1789">Bed #3</text>
+            </g>
+            <g>
+                <path d='
+                    M 235 1197
+                    h 830
+                    v 375
+                    h -830
+                    Z
+                '/>
+                <text x="650" y="1384">Master bedroom</text>
+            </g>
+        </g>
+    </g>
+</svg>
