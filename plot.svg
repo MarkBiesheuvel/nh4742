@@ -49,8 +49,12 @@
         '/>
     </g>
 
-    <!-- Border of building area -->
-    <g fill='#000' visibility='hidden'>
+    <!-- Maximum building area -->
+    <g visibility='hidden' data-role='design' data-id='design-empty'>
+    </g>
+
+    <!-- Maximum building area -->
+    <g fill='#bfd642' visibility='hidden' data-role='design' data-id='design-max'>
         <path d='
             M 200 2362
             h 900
@@ -61,7 +65,7 @@
     </g>
 
     <!-- Default dimensions of GL4 -->
-    <g fill='#e31d26' visibility='hidden'>
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-gl4'>
         <path d='
             M 200 2362
             h 875
@@ -71,8 +75,8 @@
         '/>
     </g>
 
-    <!-- Custom sized house with one parking spot  -->
-    <g fill='#e31d26' visibility='hidden'>
+    <!-- Custom sized house based on GL5  -->
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-gl5'>
         <path d='
             M 200 2362
             h 800
@@ -84,7 +88,7 @@
             h -500
             Z
         '/>
-        <path fill='#bfd642' d='
+        <path fill='#bfd642' visibility='hidden' d='
             M 1038 1862
             v 450
             h 225
@@ -94,7 +98,7 @@
     </g>
 
     <!-- Custom sized house with garage on the front  -->
-    <g fill='#e31d26' visibility='visible'>
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-custom'>
         <path d='
             M 0 2662
             h 600
@@ -108,7 +112,7 @@
         '/>
 
         <!-- Ground floor rooms (walls are 35cm) -->
-        <g fill='#FF647F' visibility='visible'>
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
             <g>
                 <path d='
                     M 35 2627
@@ -117,7 +121,7 @@
                     h -530
                     Z
                 '/>
-                <text x="300" y="2495">Garage</text>
+                <text x='300' y='2495'>Garage</text>
             </g>
             <g>
                 <path d='
@@ -127,7 +131,7 @@
                     h -350
                     Z
                 '/>
-                <text x="210" y="2212">Pantry</text>
+                <text x='210' y='2212'>Pantry</text>
             </g>
             <g>
                 <path d='
@@ -137,7 +141,7 @@
                     h -145
                     Z
                 '/>
-                <text x="492" y="2212">WC</text>
+                <text x='492' y='2212'>WC</text>
             </g>
             <g>
                 <path d='
@@ -150,7 +154,7 @@
                     h -465
                     Z
                 '/>
-                <text x="832" y="2212">Entrance</text>
+                <text x='832' y='2212'>Entrance</text>
             </g>
             <g>
                 <path d='
@@ -160,7 +164,7 @@
                     h -310
                     Z
                 '/>
-                <text x="910" y="1929">Office</text>
+                <text x='910' y='1929'>Office</text>
             </g>
             <g>
                 <path d='
@@ -170,7 +174,7 @@
                     h -465
                     Z
                 '/>
-                <text x="832" y="1479">Living</text>
+                <text x='832' y='1479'>Living</text>
             </g>
             <g>
                 <path d='
@@ -180,22 +184,22 @@
                     h -330
                     Z
                 '/>
-                <text x="400" y="1479">Dining</text>
-                <text x="400" y="1830">Kitchen</text>
+                <text x='400' y='1479'>Dining</text>
+                <text x='400' y='1830'>Kitchen</text>
             </g>
         </g>
 
         <!-- First floor rooms (walls are 35cm) -->
-        <g fill='#FF647F' visibility='hidden'>
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
             <g>
-                <path fill="#FF92A5" d='
+                <path fill='#FF92A5' d='
                     M 600 2097
                     h 465
                     v 230
                     h -465
                     Z
                 '/>
-                <text x="832" y="2212">Vide</text>
+                <text x='832' y='2212'>Vide</text>
             </g>
             <g>
                 <path d='
@@ -217,7 +221,7 @@
                     h -330
                     Z
                 '/>
-                <text x="400" y="2167">Bath</text>
+                <text x='400' y='2167'>Bath</text>
             </g>
             <g>
                 <path d='
@@ -227,7 +231,7 @@
                     h -330
                     Z
                 '/>
-                <text x="400" y="1789">Bed #2</text>
+                <text x='400' y='1789'>Bed #2</text>
             </g>
             <g>
                 <path d='
@@ -237,7 +241,7 @@
                     h -340
                     Z
                 '/>
-                <text x="895" y="1789">Bed #3</text>
+                <text x='895' y='1789'>Bed #3</text>
             </g>
             <g>
                 <path d='
@@ -247,7 +251,7 @@
                     h -830
                     Z
                 '/>
-                <text x="650" y="1384">Master bedroom</text>
+                <text x='650' y='1384'>Master bedroom</text>
             </g>
         </g>
     </g>
