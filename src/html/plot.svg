@@ -1,14 +1,27 @@
 <!-- Viewbox with 1m meter margin on the sides -->
 <svg viewBox='-100 -100 1400 3456' xmlns='http://www.w3.org/2000/svg'>
-
     <style>
         text {
-            fill: black;
-            font: 80px sans-serif;
+            fill: #212529;
+            font: 5em sans-serif;
             text-anchor: middle;
             dominant-baseline: middle;
         }
+
+        text.small {
+            font: bold 2em sans-serif;
+        }
     </style>
+
+    <defs>
+        <filter x="0" y="0" width="1" height="1" id="solid-bg">
+        <feFlood flood-color="white" flood-opacity="0.4" result="bg" />
+        <feMerge>
+            <feMergeNode in="bg"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+        </filter>
+    </defs>
 
     <!-- Entire plot -->
     <g visibility='visible'>
@@ -88,17 +101,10 @@
             h -500
             Z
         '/>
-        <path fill='#bfd642' visibility='hidden' d='
-            M 1038 1862
-            v 450
-            h 225
-            v -450
-            Z
-        '/>
     </g>
 
     <!-- Custom sized house with garage on the front  -->
-    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-custom'>
+    <g fill='#e31d26' visibility='visible' data-role='design' data-id='design-custom'>
         <path d='
             M 0 2662
             h 600
@@ -112,7 +118,7 @@
         '/>
 
         <!-- Ground floor rooms (walls are 35cm) -->
-        <g fill='#FF647F' visibility='hidden' data-role='floor'>
+        <g fill='#FF647F' visibility='visible' data-role='floor'>
             <g>
                 <path d='
                     M 35 2627
