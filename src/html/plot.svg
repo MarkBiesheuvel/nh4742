@@ -86,6 +86,105 @@
             h -875
             Z
         '/>
+
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
+            <g>
+                <path d='
+                    M 235 2327
+                    h 805
+                    v -305
+                    h -329
+                    v -413
+                    h -475
+                    Z
+                '/>
+                <text x='472' y='1968'>Living</text>
+            </g>
+            <g>
+                <path d='
+                    M 745 1609
+                    h 295
+                    v 378
+                    h -295
+                    Z
+                '/>
+                <text x='892' y='1798'>Entr.</text>
+            </g>
+            <g>
+                <path d='
+                    M 235 1574
+                    h 805
+                    v -427
+                    h -805
+                    Z
+                '/>
+                <text x='637' y='1361'>Kitchen</text>
+            </g>
+        </g>
+
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
+            <g>
+                <path d='
+                    M 235 2327
+                    h 805
+                    v -464
+                    h -805
+                    Z
+                '/>
+                <text x='637' y='2095'>Master bedroom</text>
+            </g>
+            <g>
+                <path d='
+                    M 235 1828
+                    h 385
+                    v -260
+                    h -385
+                    Z
+                '/>
+                <text x='427' y='1698'>Bath</text>
+            </g>
+            <g>
+                <path fill='#FF92A5' d='
+                    M 745 1828
+                    h 295
+                    v -260
+                    h -295
+                    Z
+                '/>
+                <text x='892' y='1713'>Vide</text>
+            </g>
+            <g>
+                <path d='
+                    M 655 1828
+                    h 90
+                    v -385
+                    h -90
+                    Z
+                '/>
+            </g>
+            <g>
+                <path d='
+                    M 235 1533
+                    h 385
+                    v -386
+                    h -385
+                    Z
+                '/>
+                <text x='427' y='1340'>Bed #2</text>
+            </g>
+            <g>
+                <path d='
+                    M 655 1147
+                    h 385
+                    v 386
+                    h -260
+                    v -125
+                    h -125
+                    Z
+                '/>
+                <text x='847' y='1340'>Bed #3</text>
+            </g>
+        </g>
     </g>
 
     <!-- Custom sized house based on GL5  -->
@@ -104,7 +203,7 @@
     </g>
 
     <!-- Custom sized house with garage on the front  -->
-    <g fill='#e31d26' visibility='visible' data-role='design' data-id='design-custom'>
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-custom'>
         <path d='
             M 0 2662
             h 600
@@ -118,7 +217,7 @@
         '/>
 
         <!-- Ground floor rooms (walls are 35cm) -->
-        <g fill='#FF647F' visibility='visible' data-role='floor'>
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
             <g>
                 <path d='
                     M 35 2627

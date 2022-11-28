@@ -43,9 +43,7 @@ class Design {
     this.group.setAttribute('visibility', 'visible');
 
     // If this design has floors, activate the active floor again
-    if (this.activateFloor) {
-      this.activateFloor.activate();
-    }
+    this.setFloor(activateFloorIndex);
     
     // Set global reference, so this design can be deactivated later
     activeDesign = this;
@@ -62,6 +60,9 @@ class Design {
     if (this.activateFloor) {
       this.activateFloor.deactivate();
     }
+
+    // No longer active floor
+    this.activateFloor = null;
   }
 }
 
@@ -83,6 +84,7 @@ class Floor {
 const svg = document.getElementById('svg');
 let activeDesign = null;
 let activeFloorButton = null;
+let activateFloorIndex = 0;
 svg.addEventListener('load', () => {
 
   // Get inner document from SVG
@@ -100,7 +102,7 @@ svg.addEventListener('load', () => {
   // Iterate over all buttons that target floor
   document.querySelectorAll('button[data-target="floor"]').forEach((button, index) => {
     // First one is already active
-    if (index == 0) {
+    if (index == activateFloorIndex) {
       activeFloorButton = button;
     }
 
@@ -117,6 +119,7 @@ svg.addEventListener('load', () => {
         // Set the current active
         button.classList.add('active')
         activeFloorButton = button;
+        activateFloorIndex = index;
       }
     })
   });
