@@ -121,23 +121,52 @@ svg.addEventListener('load', () => {
     })
   });
 
-  // Iterate over all paths inside designs
+  // Create new <text> element
   const createText = (length, x, y, rotate=false) => {
+    // Convert to meters
+    const meters = Math.abs(length/100).toFixed(2);
+
+    // Create text node
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     text.classList.add('small');
-    text.textContent = `${Math.abs(length/100).toFixed(2)}m`;
-    text.setAttribute('filter', 'url(#solid-bg)')
+    text.textContent = ` ${meters}m `;
+    text.setAttribute('filter', 'url(#solid-bg)');
+
+    // Rotate if vertical line
     if (rotate) {
       text.setAttribute('transform', `translate(${x},${y}) rotate(90)`);
     } else {
       text.setAttribute('transform', `translate(${x},${y})`);
     }
     return text;
-  }
+  };
+
+  // Create new <g> element
+  const createGroup = () => {
+    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    group.setAttribute('visibility', 'hidden');
+    return group;
+  };
+
+  // Iterate over all paths inside designs
   svgDoc.querySelectorAll('g[data-role="design"] path').forEach((path) => {
     const parent = path.parentNode;
-    const d = path.getAttribute('d');
-    const segments = d.split(/(?=[vhZ])/);
+    const group = createGroup();
+    parent.appendChild(group);
+
+    // Show/hide labels on mouse over
+    const activate = () => group.setAttribute('visibility', 'visible');
+    const deactivate = () => group.setAttribute('visibility', 'hidden');
+    const anchor = parent.dataset.role ? path : parent;
+    anchor.addEventListener('mouseenter', activate);
+    anchor.addEventListener('mouseleave', deactivate);
+    anchor.addEventListener('touchstart', activate);
+    anchor.addEventListener('touchend', deactivate);
+
+    // Use regex to split path description into segments
+    const segments = path.getAttribute('d').split(/(?=[vhZ])/);
+
+    // Iterate over segments of path
     let originX = x = 0;
     let originY = y = 0;
     let matches;
@@ -156,7 +185,7 @@ svg.addEventListener('load', () => {
 
         // Add text element in the middle of the line
         const text = createText(width, x + width / 2, y, false);
-        parent.appendChild(text);
+        group.appendChild(text);
 
         // Update coordinates
         x += width;
@@ -169,7 +198,7 @@ svg.addEventListener('load', () => {
 
         // Add text element in the middle of the line
         const text = createText(height, x, y + height / 2, true);
-        parent.appendChild(text);
+        group.appendChild(text);
 
         // Update coordinates
         y += height;
@@ -181,10 +210,10 @@ svg.addEventListener('load', () => {
         const dy = originY - y;
         if (Math.abs(dy) < Math.abs(dx)) { // Horizontal line
           const text = createText(dx, x + dx / 2, y, false);
-          parent.appendChild(text);
+          group.appendChild(text);
         } else { // Vertical line
           const text = createText(dy, x, y + dy / 2, true);
-          parent.appendChild(text);
+          group.appendChild(text);
         }
       }
     });

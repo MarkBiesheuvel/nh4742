@@ -1,5 +1,5 @@
 <!-- Viewbox with 1m meter margin on the sides -->
-<svg viewBox='-100 -100 1400 3456' xmlns='http://www.w3.org/2000/svg'>
+<svg viewBox='-100 -100 1500 3456' xmlns='http://www.w3.org/2000/svg'>
     <style>
         text {
             fill: #212529;
@@ -9,13 +9,13 @@
         }
 
         text.small {
-            font: bold 2em sans-serif;
+            font: bold 3em sans-serif;
         }
     </style>
 
     <defs>
         <filter x="0" y="0" width="1" height="1" id="solid-bg">
-        <feFlood flood-color="white" flood-opacity="0.4" result="bg" />
+        <feFlood flood-color="white" flood-opacity="0.5" result="bg" />
         <feMerge>
             <feMergeNode in="bg"/>
             <feMergeNode in="SourceGraphic"/>
@@ -151,8 +151,7 @@
             </g>
             <g>
                 <path d='
-                    M 600 2097
-                    v -300
+                    M 600 1797
                     h 120
                     v 300
                     h 345
@@ -209,13 +208,12 @@
             </g>
             <g>
                 <path d='
-                    M 600 2007
-                    v -400
+                    M 600 2097
+                    v -490
                     h 90
                     v 400
                     h 375
                     v 90
-                    h -465
                     Z
                 '/>
             </g>
