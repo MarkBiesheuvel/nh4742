@@ -155,7 +155,7 @@ svg.addEventListener('load', () => {
   svgDoc.querySelectorAll('g[data-role="design"] path').forEach((path) => {
     const parent = path.parentNode;
     const group = createGroup();
-    parent.appendChild(group);
+    parent.parentNode.appendChild(group);
 
     // Show/hide labels on mouse over
     const activate = () => group.setAttribute('visibility', 'visible');
