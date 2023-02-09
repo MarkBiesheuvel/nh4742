@@ -12,7 +12,7 @@ class Design {
 
     // Preselect the first floor in the list (which is ground floor)
     if (this.floors.length > 0) {
-      this.activateFloor = this.floors[0];
+      this.activateFloor = this.floors[activateFloorIndex];
     }
 
     button.addEventListener('click', () => {
