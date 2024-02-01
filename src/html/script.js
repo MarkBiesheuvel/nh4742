@@ -157,6 +157,11 @@ svg.addEventListener('load', () => {
     const group = createGroup();
     parent.parentNode.appendChild(group);
 
+    // Return early if no hover is needed
+    if (parent.dataset.hover === "disable") {
+      return;
+    }
+
     // Show/hide labels on mouse over
     const activate = () => group.setAttribute('visibility', 'visible');
     const deactivate = () => group.setAttribute('visibility', 'hidden');

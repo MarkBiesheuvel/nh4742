@@ -482,7 +482,7 @@
     </g>
 
     <!-- GL4 sized house with garage on the front  -->
-    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-custom-gl4'>
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-first-iteration'>
         <path d='
             M 0 2662
             h 600
@@ -630,6 +630,102 @@
                     Z
                 '/>
                 <text x='833' y='2170'>Bed #3</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- GL4 without garage -->
+    <g fill='#e31d26' visibility='hidden' data-role='design' data-id='design-final-iteration'>
+        <path d='
+            M 200 2362
+            h 875
+            v -1253
+            h -875
+            Z
+        '/>
+
+        <!-- Ground floor rooms (walls are 37cm) -->
+        <g fill='#FF647F' visibility='hidden' data-role='floor'>
+
+            <g>
+                <path d='
+                    M 237 2327
+                    h 801
+                    v -395
+                    h -801
+                    Z
+                '/>
+                <text x='637' y='2130'>Kitchen</text>
+            </g>
+
+            <g>
+                <path d='
+                    M 237 1912
+                    h 416
+                    v -764
+                    h -416
+                    Z
+                '/>
+                <text x='445' y='1530'>Living</text>
+            </g>
+
+            <g>
+                <path d='
+                    M 665 1920
+                    h 373
+                    v -269
+                    h -228
+                    v -130
+                    h -145
+                    Z
+                '/>
+                <text x='851' y='1760'>Entrance</text>
+            </g>
+
+            <g data-hover="disable">
+                <path d='
+                    M 822 1639
+                    h 40
+                    v -118
+                    h -40
+                    Z
+                '/>
+                <!-- Utility closet -->
+            </g>
+
+            <g data-hover="disable">
+                <path d='
+                    M 874 1639
+                    h 164
+                    v -118
+                    h -164
+                    Z
+                '/>
+                <text x='956' y='1580' class="small">WC</text>
+            </g>
+
+            <g>
+                <path d='
+                    M 665 1510
+                    h 197
+                    v -102
+                    h 178
+                    v -260
+                    h -373
+                    Z
+                '/>
+                <text x='851' y='1300'>Office</text>
+            </g>
+
+            <g data-hover="disable">
+                <path d='
+                    M 874 1510
+                    h 164
+                    v -90
+                    h -164
+                    Z
+                '/>
+                <!-- Heat pump -->
             </g>
         </g>
     </g>
